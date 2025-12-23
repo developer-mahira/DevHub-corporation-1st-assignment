@@ -1,23 +1,23 @@
 // Product Data
 const products = [
-    { id: 1, name: 'T-shirts with multiple colors, for men', price: 10.30, category: 'Clothes and wear', discount: 0, image: "assets/image2.jpeg"},
-    { id: 2, name: 'Jeans pants for men blue color', price: 10.30, category: 'Clothes and wear', discount: 0, image: "assets/image3.jpeg" },
-    { id: 3, name: 'Brown winter coat medium size', price: 12.50, category: 'Clothes and wear', discount: 0, image: "assets/image4.jpeg" },
-    { id: 4, name: "Jeans bag for travel for men", price: 34.00, category: 'Sports and outdoor', discount: 0, image: "assets/image5.jpeg" },
-    { id: 5, name: 'Leather wallet for men', price: 99.00, category: 'Sports and outdoor', discount: 0, image: "assets/image6.jpeg" },
-    { id: 6, name: 'Canon camera black, 100x zoom', price: 9.99, category: 'Computer and tech', discount: 40, image: "assets/image7.jpeg" },
+    { id: 1, name: 'T-shirts with multiple colors, for men', price: 10.30, category: 'Clothes and wear', discount: 0, image: "assets/image16.jpeg"},
+    { id: 2, name: 'Jeans pants for men blue color', price: 10.30, category: 'Clothes and wear', discount: 0, image: "assets/image18.jpeg" },
+    { id: 3, name: 'Brown winter coat medium size', price: 12.50, category: 'Clothes and wear', discount: 0, image: "assets/image16.jpeg" },
+    { id: 4, name: "Jeans bag for travel for men", price: 34.00, category: 'Sports and outdoor', discount: 0, image: "assets/image17.jpeg" },
+    { id: 5, name: 'Leather wallet for men', price: 99.00, category: 'Sports and outdoor', discount: 0, image: "assets/images19.jpeg" },
+    { id: 6, name: 'Canon camera black, 100x zoom', price: 9.99, category: 'Computer and tech', discount: 40, image: "assets/image10.jpeg" },
     { id: 7, name: 'Headset for gaming with mic', price: 8.99, category: 'Computer and tech', discount: 0, image: "assets/image8.jpeg" },
-    { id: 8, name: 'Smartwatch silver color modern', price: 10.30, category: 'Computer and tech', discount: 0, image: "assets/image9.jpeg" },
-    { id: 9, name: 'Blue wallet for men leather metarlfial', price: 10.30, category: 'Sports and outdoor', discount: 0, image: "assets/image10.jpeg" },
+    { id: 8, name: 'Smartwatch silver color modern', price: 10.30, category: 'Computer and tech', discount: 0, image: "assets/image2.jpeg" },
+    { id: 9, name: 'Blue wallet for men leather metarlfial', price: 10.30, category: 'Sports and outdoor', discount: 0, image: "assets/images19.jpeg" },
     { id: 10, name: 'Jeans bag for travel for men', price: 80.95, category: 'Sports and outdoor', discount: 0, image: "assets/image11.jpeg" },
 ];
 
 const dealsProducts = [
-    { id: 11, name: 'Smart watches', price: 100, discount: 25, category: 'Computer and tech', image: "assets/image12.jpeg" },
+    { id: 11, name: 'Smart watches', price: 100, discount: 25, category: 'Computer and tech', image: "assets/image2.jpeg" },
     { id: 12, name: 'Laptops', price: 500, discount: 15, category: 'Computer and tech', image: "assets/image13.jpeg" },
     { id: 13, name: 'GoPro cameras', price: 300, discount: 40, category: 'Computer and tech', image: "assets/image14.jpeg" },
-    { id: 14, name: 'Headphones', price: 80, discount: 25, category: 'Computer and tech', image: "assets/image15.jpeg" },
-    { id: 15, name: 'Canon cameras', price: 600, discount: 25, category: 'Computer and tech', image: "assets/image16.jpeg" },
+    { id: 14, name: 'Headphones', price: 80, discount: 25, category: 'Computer and tech', image: "assets/image11.jpeg" },
+    { id: 15, name: 'Canon cameras', price: 600, discount: 25, category: 'Computer and tech', image: "assets/image10.jpeg" },
 ];
 
 // Global State
