@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E---commerce Website</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="header-top">
+            <div class="container">
+                <div class="logo">
+                    <div class="logo-icon">🔒</div>
+                    <span class="logo-text">Brand</span>
+                </div>
+                
+                <div class="search-bar">
+                    <input type="text" placeholder="Search" id="searchInput">
+                    <select class="category-select">
+                        <option>All category</option>
+                    </select>
+                    <button class="search-btn">Search</button>
+                </div>
+                
+                <div class="header-actions">
+                    <div class="header-action">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                            <circle cx="12" cy="7" r="4"></circle>
+                        </svg>
+                        <span>Profile</span>
+                    </div>
+                    <div class="header-action">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+                        </svg>
+                        <span>Message</span>
+                    </div>
+                    <div class="header-action">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+                        </svg>
+                        <span>Wishlist</span>
+                    </div>
+                    <div class="header-action cart-action" id="cartToggle">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="9" cy="21" r="1"></circle>
+                            <circle cx="20" cy="21" r="1"></circle>
+                            <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+                        </svg>
+                        <span>My cart</span>
+                        <span class="cart-badge" id="cartBadge" style="display: none;">0</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <nav class="nav-bar">
+            <div class="container">
+                <div class="nav-left">
+                    <button class="nav-item all-category">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <line x1="3" y1="12" x2="21" y2="12"></line>
+                            <line x1="3" y1="6" x2="21" y2="6"></line>
+                            <line x1="3" y1="18" x2="21" y2="18"></line>
+                        </svg>
+                        All category
+                    </button>
+                    <a href="#" class="nav-item" onclick="showPage('home')">Hot offers</a>
+                    <a href="#" class="nav-item">Gift boxes</a>
+                    <a href="#" class="nav-item">Projects</a>
+                    <a href="#" class="nav-item">Menu item</a>
+                    <a href="#" class="nav-item">Help 
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polyline points="6 9 12 15 18 9"></polyline>
+                        </svg>
+                    </a>
+                </div>
+                <div class="nav-right">
+                    <select class="lang-select">
+                        <option>English, USD</option>
+                    </select>
+                    <select class="ship-select">
+                        <option>Ship to 🇩🇪</option>
+                    </select>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Home Page -->
+    <div id="homePage" class="page-content">
+        <div class="home-page">
+            <div class="container">
+                <div class="hero-section">
+                    <aside class="sidebar">
+                        <button class="sidebar-item" onclick="filterCategory('Automobiles')">Automobiles</button>
+                        <button class="sidebar-item" onclick="filterCategory('Clothes and wear')">Clothes and wear</button>
+                        <button class="sidebar-item" onclick="filterCategory('Home interiors')">Home interiors</button>
+                        <button class="sidebar-item" onclick="filterCategory('Computer and tech')">Computer and tech</button>
+                        <button class="sidebar-item" onclick="filterCategory('Tools, equipments')">Tools, equipments</button>
+                        <button class="sidebar-item" onclick="filterCategory('Sports and outdoor')">Sports and outdoor</button>
+                        <button class="sidebar-item" onclick="filterCategory('Animal and pets')">Animal and pets</button>
+                        <button class="sidebar-item" onclick="filterCategory('Machinery tools')">Machinery tools</button>
+                        <button class="sidebar-item" onclick="filterCategory('All category')">More category</button>
+                    </aside>
+                    
+                    <div class="hero-banner">
+                        <div class="hero-content">
+                            <h2 class="hero-title">Latest trending<br/><strong>Electronic items</strong></h2>
+                            <button class="hero-btn">Learn more</button>
+                        </div>
+                        <div class="hero-image">
+                           <img src="assets/hero.jpeg" alt="">
+                        </div>
+                    </div>
+                    
+                    <div class="hero-sidebar">
+                        <div class="user-widget">
+                            <div class="user-avatar">👤</div>
+                            <p>Hi, user<br/>let's get started</p>
+                            <button class="join-btn">Join now</button>
+                            <button class="login-btn">Log in</button>
+                        </div>
+                        <div class="promo-widget orange">
+                            Get US $10 off<br/>with a new<br/>supplier
+                        </div>
+                        <div class="promo-widget teal">
+                            Send quotes with<br/>supplier<br/>preferences
+                        </div>
+                    </div>
+                </div>
+                
+                <section class="deals-section">
+                    <div class="section-header">
+                        <div>
+                            <h2>Deals and offers</h2>
+                            <p>Hygiene equipments</p>
+                        </div>
+                        <div class="countdown">
+                            <div class="countdown-item"><div id="days">04</div><span>Days</span></div>
+                            <div class="countdown-item"><div id="hours">13</div><span>Hour</span></div>
+                            <div class="countdown-item"><div id="minutes">34</div><span>Min</span></div>
+                            <div class="countdown-item"><div id="seconds">56</div><span>Sec</span></div>
+                        </div>
+                    </div>
+                    <div class="deals-grid" id="dealsGrid"></div>
+                </section>
+                
+                <section class="category-section">
+                    <div class="category-card beige">
+                        <h2>Home and<br/>outdoor</h2>
+                        <img src="assets/image1.jpeg" alt="">
+                        <button class="category-btn">Source now</button>
+                    </div>
+                    <div class="category-grid">
+                        <div class="category-item">
+                            <div class="category-item-image">
+                                <img src="assets/image4.jpeg" alt="">
+                            </div>
+                            <h4>Soft chairs</h4>
+                            <p class="category-price">From<br/>USD 19</p>
+                        </div>
+                        <div class="category-item">
+                            <div class="category-item-image">
+                                <img src="assets/image5.jpeg" alt="">
+                            </div>
+                            <h4>Sofa & chair</h4>
+                            <p class="category-price">From<br/>USD 19</p>
+                        </div>
+                        <div class="category-item">
+                            <div class="category-item-image">
+                                <img src="assets/image6.jpeg" alt="">
+                            </div>
+                            <h4>Kitchen dishes</h4>
+                            <p class="category-price">From<br/>USD 19</p>
+                        </div>
+                        <div class="category-item">
+                            <div class="category-item-image">
+                                <img src="assets/image2.jpeg" alt="">
+                            </div>
+                            <h4>Smart watches</h4>
+                            <p class="category-price">From<br/>USD 19</p>
+                        </div>
+                        <div class="category-item">
+                            <div class="category-item-image">
+                                <img src="assets/image7.jpeg" alt="">
+                            </div>
+                            <h4>Kitchen mixer</h4>
+                            <p class="category-price">From<br/>USD 100</p>
+                        </div>
+                        <div class="category-item">
+                            <div class="category-item-image">
+                                <img src="assets/image7.jpeg" alt="">
+                            </div>
+                            <h4>Blenders</h4>
+                            <p class="category-price">From<br/>USD 39</p>
+                        </div>
+                        <div class="category-item">
+                            <div class="category-item-image">
+                                <img src="assets/image9.jpeg" alt="">
+                            </div>
+                            <h4>Home appliance</h4>
+                            <p class="category-price">From<br/>USD 19</p>
+                        </div>
+                        <div class="category-item">
+                            <div class="category-item-image">
+                                <img src="assets/image9.jpeg" alt="">
+                            </div>
+                            <h4>Coffee maker</h4>
+                            <p class="category-price">From<br/>USD 10</p>
+                        </div>
+                    </div>
+                </section>
+                
+                <section class="category-section">
+                    <div class="category-card purple">
+                        <h2>Consumer<br/>electronics and<br/>gadgets</h2>
+                        <img src="assets/image3.jpeg" alt="">
+                        <button class="category-btn">Source now</button>
+                    </div>
+                    <div class="category-grid">
+                        <div class="category-item">
+                            <div class="category-item-image">
+                                <img src="assets/image2.jpeg" alt="">
+                            </div>
+                            <h4>Smart watches</h4>
+                            <p class="category-price">From<br/>USD 19</p>
+                        </div>
+                        <div class="category-item">
+                            <div class="category-item-image">
+                                <img src="assets/image10.jpeg" alt="">
+                            </div>
+                            <h4>Cameras</h4>
+                            <p class="category-price">From<br/>USD 89</p>
+                        </div>
+                        <div class="category-item">
+                            <div class="category-item-image">
+                                <img src="assets/image11.jpeg " alt="">
+                            </div>
+                            <h4>Headphones</h4>
+                            <p class="category-price">From<br/>USD 10</p>
+                        </div>
+                        <div class="category-item">
+                            <div class="category-item-image">
+                                <img src="assets/image2.jpeg" alt="">
+                            </div>
+                            <h4>Smart watches</h4>
+                            <p class="category-price">From<br/>USD 90</p>
+                        </div>
+                        <div class="category-item">
+                            <div class="category-item-image">
+                                <img src="assets/image12.jpeg" alt="">
+                            </div>
+                            <h4>Gaming set</h4>
+                            <p class="category-price">From<br/>USD 35</p>
+                        </div>
+                        <div class="category-item">
+                            <div class="category-item-image">
+                                <img src="assets/image13.jpeg" alt="">
+                            </div>
+                            <h4>Laptops & PC</h4>
+                            <p class="category-price">From<br/>USD 340</p>
+                        </div>
+                        <div class="category-item">
+                            <div class="category-item-image">
+                                <img src="assets/image14.jpeg" alt="">
+                            </div>
+                            <h4>Smartphones</h4>
+                            <p class="category-price">From<br/>USD 19</p>
+                        </div>
+                        <div class="category-item">
+                            <div class="category-item-image">
+                                <img src="assets/image9.jpeg" alt="">
+                            </div>
+                            <h4>Electric kettle</h4>
+                            <p class="category-price">From<br/>USD 240</p>
+                        </div>
+                    </div>
+                </section>
+                
+                <section class="quote-section">
+                    <div class="quote-content">
+                        <h2>An easy way to send<br/>requests to all suppliers</h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing<br/>elit, sed do eiusmod tempor incididunt.</p>
+                    </div>
+                    <div class="quote-form">
+                        <h3>Send quote to suppliers</h3>
+                        <input type="text" placeholder="What item you need?">
+                        <textarea placeholder="Type more details"></textarea>
+                        <div class="quantity-row">
+                            <input type="number" placeholder="Quantity">
+                            <select>
+                                <option>Pcs</option>
+                            </select>
+                        </div>
+                        <button class="quote-btn">Send inquiry</button>
+                    </div>
+                </section>
+                
+                <section class="recommended-section">
+                    <h2>Recommended items</h2>
+                    <div class="product-grid" id="recommendedGrid"></div>
+                </section>
+                
+                <section class="services-section">
+                    <h2>Our extra services</h2>
+                    <div class="services-grid">
+                        <div class="service-card">
+                            <div class="service-icon">🔍</div>
+                            <h3>Source from<br/>Industry Hubs</h3>
+                        </div>
+                        <div class="service-card">
+                            <div class="service-icon">🎨</div>
+                            <h3>Customize Your<br/>Products</h3>
+                        </div>
+                        <div class="service-card">
+                            <div class="service-icon">✈️</div>
+                            <h3>Fast, reliable shipping<br/>by ocean or air</h3>
+                        </div>
+                        <div class="service-card">
+                            <div class="service-icon">🛡️</div>
+                            <h3>Product monitoring<br/>and inspection</h3>
+                        </div>
+                    </div>
+                </section>
+                
+                <section class="region-section">
+                    <h2>Suppliers by region</h2>
+                    <div class="region-grid">
+                        <div class="region-item">🇦🇪 <span>Arabic Emirates</span><small>shopname.ae</small></div>
+                        <div class="region-item">🇦🇺 <span>Australia</span><small>shopname.com.au</small></div>
+                        <div class="region-item">🇺🇸 <span>United States</span><small>shopname.us</small></div>
+                        <div class="region-item">🇷🇺 <span>Russia</span><small>shopname.ru</small></div>
+                        <div class="region-item">🇮🇹 <span>Italy</span><small>shopname.it</small></div>
+                        <div class="region-item">🇩🇰 <span>Denmark</span><small>denmark.com.dk</small></div>
+                        <div class="region-item">🇫🇷 <span>France</span><small>shopname.com.fr</small></div>
+                        <div class="region-item">🇦🇪 <span>Arabic Emirates</span><small>shopname.ae</small></div>
+                        <div class="region-item">🇨🇳 <span>China</span><small>shopname.ae</small></div>
+                        <div class="region-item">🇬🇧 <span>Great Britain</span><small>shopname.co.uk</small></div>
+                    </div>
+                </section>
+                
+                <section class="newsletter-section">
+                    <h2>Subscribe on our newsletter</h2>
+                    <p>Get daily news on upcoming offers from many suppliers all over the world</p>
+                    <div class="newsletter-form">
+                        <input type="email" placeholder="Email">
+                        <button>Subscribe</button>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </div>
+
+    <!-- Products Page -->
+    <div id="productsPage" class="page-content" style="display: none;">
+        <div class="products-page">
+            <div class="container">
+                <div class="category-filter">
+                    <h2>Categories</h2>
+                    <button class="filter-btn active" onclick="filterCategory('All category')">All category</button>
+                    <button class="filter-btn" onclick="filterCategory('Automobiles')">Automobiles</button>
+                    <button class="filter-btn" onclick="filterCategory('Clothes and wear')">Clothes and wear</button>
+                    <button class="filter-btn" onclick="filterCategory('Home interiors')">Home interiors</button>
+                    <button class="filter-btn" onclick="filterCategory('Computer and tech')">Computer and tech</button>
+                    <button class="filter-btn" onclick="filterCategory('Tools, equipments')">Tools, equipments</button>
+                    <button class="filter-btn" onclick="filterCategory('Sports and outdoor')">Sports and outdoor</button>
+                    <button class="filter-btn" onclick="filterCategory('Animal and pets')">Animal and pets</button>
+                    <button class="filter-btn" onclick="filterCategory('Machinery tools')">Machinery tools</button>
+                </div>
+                
+                <div class="products-grid-page" id="productsGridPage"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Product Detail Page -->
+    <div id="productDetailPage" class="page-content" style="display: none;">
+        <div class="product-detail-page">
+            <div class="container">
+                <div class="product-detail-grid">
+                    <div class="product-detail-image" id="detailImage"></div>
+                    
+                    <div class="product-detail-info">
+                        <h1 id="detailName"></h1>
+                        <div class="product-rating">⭐⭐⭐⭐⭐ (4.5) 127 reviews</div>
+                        
+                        <div class="product-price-section" id="detailPriceSection"></div>
+                        
+                        <div class="product-options">
+                            <label>Select Size:</label>
+                            <div class="size-options">
+                                <button class="size-btn" onclick="selectSize('S')">S</button>
+                                <button class="size-btn" onclick="selectSize('M')">M</button>
+                                <button class="size-btn" onclick="selectSize('L')">L</button>
+                                <button class="size-btn" onclick="selectSize('XL')">XL</button>
+                            </div>
+                        </div>
+                        
+                        <button class="add-to-cart-btn" onclick="addToCartFromDetail()">Add to Cart</button>
+                        
+                        <div class="product-description">
+                            <h3>Product Description</h3>
+                            <p>High-quality product with excellent craftsmanship. Perfect for everyday use. Made with premium materials to ensure durability and comfort.</p>
+                        </div>
+                        
+                        <div class="product-reviews">
+                            <h3>Customer Reviews</h3>
+                            <div class="review">
+                                <div class="review-header">
+                                    <strong>John D.</strong>
+                                    <span>⭐⭐⭐⭐⭐</span>
+                                </div>
+                                <p>Excellent product! Highly recommended.</p>
+                            </div>
+                            <div class="review">
+                                <div class="review-header">
+                                    <strong>Sarah M.</strong>
+                                    <span>⭐⭐⭐⭐</span>
+                                </div>
+                                <p>Good quality for the price. Fast shipping.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="related-products">
+                    <h2>Related Products</h2>
+                    <div class="related-grid" id="relatedGrid"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Cart Sidebar -->
+    <div class="cart-sidebar" id="cartSidebar">
+        <div class="cart-header">
+            <h2>Shopping Cart (<span id="cartCount">0</span>)</h2>
+            <button class="close-cart" onclick="toggleCart()">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <line x1="18" y1="6" x2="6" y2="18"></line>
+                    <line x1="6" y1="6" x2="18" y2="18"></line>
+                </svg>
+            </button>
+        </div>
+        
+        <div class="cart-items" id="cartItemsContainer">
+            <p class="empty-cart">Your cart is empty</p>
+        </div>
+        
+        <div class="cart-footer" id="cartFooter" style="display: none;">
+            <div class="discount-section">
+                <input type="text" placeholder="Discount code" id="discountInput">
+                <button onclick="applyDiscount()">Apply</button>
+            </div>
+            <div id="discountMessage"></div>
+            <div class="cart-total">
+                <span>Total:</span>
+                <span class="total-amount" id="cartTotal">$0.00</span>
+            </div>
+            <button class="checkout-btn">Proceed to Checkout</button>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <div class="footer-logo">
+                        <div class="logo-icon">🔒</div>
+                        <span class="logo-text">Brand</span>
+                    </div>
+                    <p>Best information about the company gies here but now lorem ipsum is</p>
+                    <div class="social-icons">
+                        <a href="#" class="social-icon">f</a>
+                        <a href="#" class="social-icon">t</a>
+                        <a href="#" class="social-icon">in</a>
+                        <a href="#" class="social-icon">📷</a>
+                        <a href="#" class="social-icon">▶</a>
+                    </div>
+                </div>
+                
+                <div class="footer-col">
+                    <h3>About</h3>
+                    <a href="#">About Us</a>
+                    <a href="#">Find store</a>
+                    <a href="#">Categories</a>
+                    <a href="#">Blogs</a>
+                </div>
+                
+                <div class="footer-col">
+                    <h3>Partnership</h3>
+                    <a href="#">About Us</a>
+                    <a href="#">Find store</a>
+                    <a href="#">Categories</a>
+                    <a href="#">Blogs</a>
+                </div>
+                
+                <div class="footer-col">
+                    <h3>Information</h3>
+                    <a href="#">Help Center</a>
+                    <a href="#">Money Refund</a>
+                    <a href="#">Shipping</a>
+                    <a href="#">Contact us</a>
+                </div>
+                
+                <div class="footer-col">
+                    <h3>For users</h3>
+                    <a href="#">Login</a>
+                    <a href="#">Register</a>
+                    <a href="#">Settings</a>
+                    <a href="#">My Orders</a>
+                </div>
+                
+                <div class="footer-col">
+                    <h3>Get app</h3>
+                    <div class="app-badges">
+                        <div class="app-badge">App Store</div>
+                        <div class="app-badge">Google Play</div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>© 2023 Ecommerce.</p>
+                <select class="footer-lang">
+                    <option>🇺🇸 English</option>
+                </select>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
