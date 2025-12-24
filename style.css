@@ -201,7 +201,7 @@ body {
 /* Hero Section */
 .hero-section {
     display: grid;
-    grid-template-columns: 200px 1fr 280px;
+    grid-template-columns: 15% 65% 18%;
     gap: 16px;
     margin: 16px 0;
 }
@@ -231,13 +231,23 @@ body {
     color: #0D6EFD;
 }
 
+
 .hero-banner {
-    background: linear-gradient(135deg, #C8F6E8 0%, #8aceb9 100%);
+    background: url('assets/heroo.jpeg') no-repeat center center;
+    background-size: cover; 
     border-radius: 6px;
-    padding: 40px;
+    padding: 0; 
+    min-height: 400px; 
     position: relative;
     overflow: hidden;
-    min-height: 280px;
+    object-fit: cover;
+    max-width: 100%;
+    
+}
+
+
+.hero-content, .hero-btn, .hero-image {
+    display: none;
 }
 
 .hero-content {
