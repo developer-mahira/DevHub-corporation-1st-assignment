@@ -243,6 +243,27 @@ body {
     object-fit: cover;
     max-width: 100%;
     
+    
+}
+.button-btn{
+    box-sizing: border-box;
+    color: black;
+    position: absolute;
+    padding: 11px 28px;
+    top: 177px;
+    left: 10px;
+    background: white;
+    border: black 2px solid;
+    border-radius: 6px;
+    font-size: 16px;
+    width: 160px;
+    height: 50px;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+.button-btn:hover {
+  background:black;
+  color: white;
 }
 
 
@@ -1883,3 +1904,11 @@ img {
     object-fit: cover;      
     border-radius: 8px;
 }
+/* Breadcrumb */
+        .breadcrumb {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 16px 20px;
+            color: #8B96A5;
+            font-size: 16px;
+        }

@@ -296,3 +296,11 @@ function startDealsCountdown() {
     updateCountdown();
     setInterval(updateCountdown, 1000);
 }
+document.querySelectorAll('.favorite-button').forEach(button => {
+            button.addEventListener('click', function() {
+                const icon = this.querySelector('.favorite-icon');
+                const isFilled = icon.style.fill === 'rgb(13, 110, 253)' || icon.style.fill === '#0D6EFD';
+                icon.style.fill = isFilled ? 'none' : '#0D6EFD';
+                icon.style.stroke = isFilled ? '#0D6EFD' : 'none';
+            });
+        });
